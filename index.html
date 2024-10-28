@@ -1,20 +1,227 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Baby shower Isabel Cristina 🌸👶✨</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <meta http-equiv="refresh" content="0; url=https://www.figma.com/proto/TYaQaDqX3hCfDZzH1lqL7Q/Untitled?node-id=2-7&node-type=frame&t=ZMWTvkcjbwvKwY0Y-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1" />
-    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="shortcut icon" href="/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="manifest" href="/site.webmanifest" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+    rel="stylesheet">
+  <title>Baby Shower</title>
+  <style>
+    :root {
+      --pinkColor: #E68991;
+      --purpleColor: #9381AF;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      height: 100vh;
+      background-image: url("./img/background.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      color: #000;
+      font-family: "Rubik", sans-serif;
+    }
+
+    header {
+      background-color: white;
+      margin-bottom: 41px;
+      margin-top: 20px;
+      padding: 25px;
+    }
+
+    h1 {
+      font-size: 30px;
+      font-weight: 400;
+      text-align: center;
+    }
+
+    .highlight {
+      color: var(--pinkColor);
+      font-weight: 700;
+    }
+
+    .highlight__secondary {
+      color: var(--purpleColor);
+    }
+
+    .main-card {
+      background-color: white;
+      margin: 0 auto 50px;
+      padding: 28px 24px;
+      position: relative;
+      text-align: center;
+      width: 654px;
+
+      &:after {
+        border: 5px white solid;
+        bottom: -10px;
+        content: '';
+        left: -10px;
+        position: absolute;
+        right: -10px;
+        top: -10px;
+        z-index: -1;
+      }
+    }
+
+    .invitation {
+      font-size: 24px;
+    }
+
+    .location {
+      font-size: 20px;
+      margin-top: 40px;
+
+      h4 {
+        font-weight: 700;
+      }
+    }
+
+    .time {
+      display: flex;
+      gap: 24px;
+      justify-content: center;
+      margin-top: 33px;
+    }
+
+    .actions {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      margin-top: 50px;
+      padding: 0 10px;
+    }
+
+    .action {
+      align-items: center;
+      background-color: var(--pinkColor);
+      border-radius: 30px;
+      color: white;
+      display: flex;
+      font-family: "Noto Sans", sans-serif;
+      font-size: 22px;
+      font-weight: 700;
+      height: 60px;
+      justify-content: center;
+      text-decoration: none;
+      width: 100%;
+      max-width: 371px;
+      padding: 0 10px;
+    }
+
+    .action__secondary {
+      background-color: white;
+      border: 2px solid var(--pinkColor);
+      color: var(--pinkColor);
+      text-decoration: underline;
+    }
+
+    .link {
+      color: #E68991;
+    }
+
+    .fade-in {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation: fadeIn 1.5s ease-in forwards;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    @media only screen and (max-width: 767px) {
+      header {
+        margin-top: 25px;
+        padding: 20px;
+
+        h1 {
+          font-size: 18px;
+        }
+      }
+
+      .main-card {
+        width: 80%;
+        font-size: 16px;
+      }
+
+      .invitation {
+        font-size: 18px;
+        line-height: 1.4;
+      }
+
+      .location {
+        font-size: 16px;
+        margin-top: 20px;
+      }
+
+      .time {
+        margin-top: 20px;
+        flex-direction: column;
+        gap: 0;
+      }
+
+      .actions {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .action {
+        font-size: 18px;
+        max-width: 300px;
+      }
+    }
+  </style>
 </head>
-<body class="bs-body">
-    <main class="bs-main">
-        <img src="https://lottie.host/2f846910-778d-4dc5-bf88-92710fac2b66/sC159NzdJB.json" alt="">
-    </main>
+
+<body class="fade-in">
+  <main>
+    <header>
+      <h1>¡Estás invitado(a) al Baby Shower de <span class="highlight">Isabel Cristina</span>! 🌸👶✨</h1>
+    </header>
+    <div>
+      <section class="main-card">
+        <p class="invitation">Con gran alegría y emoción, te invitamos a celebrar la llegada de la primera hija de nuestro
+          compañero y amigo <span class="highlight highlight__secondary">Kike Gamba</span>.
+        </p>
+        <article class="location">
+          <h4>Detalles del Evento:</h4>
+          <div class="time">
+            <span>📅 Fecha: 09/11/2024</span>
+            <span>🕒 Hora: 3:00 PM</span>
+          </div>
+          <span>📍 Lugar: <a class="link" href="https://maps.app.goo.gl/JLLmpKnrghTBvEri8" target="_blank">Ver en google
+              maps</a></span>
+        </article>
+      </section>
+      <div class="actions">
+        <a class="action" target="_blank"
+          href="https://docs.google.com/spreadsheets/d/178VZFFflu-RqyJHQ9Det9PohffVWl9rVAuvNhCJBECY/edit?gid=0#gid=0">
+          Ver lista de regalos sugerida
+        </a>
+        <a class="action action__secondary" target="_blank"
+          href="https://docs.google.com/forms/d/e/1FAIpQLSfFKdCec_9f_4ZcxJT4R0c2hwmpdtry48cJmMGa6PKIvzE85g/viewform">
+          Confirmar asistencia
+        </a>
+      </div>
+    </div>
+  </main>
 </body>
+
 </html>
